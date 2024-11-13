@@ -8,7 +8,7 @@ const Timer = () => {
   const [isBreak, setIsBreak] = useState(false);
 
   useEffect(() => {
-    let interval: number | undefined;
+    let interval: NodeJS.Timeout | undefined;
 
     if (isRunning && time > 0) {
       interval = setInterval(() => {
